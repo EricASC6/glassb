@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --light-black: #272727;
+  --gray: #797979;
+  --tan: #e2e0d4;
+  --light-tan: #decbb1;
+  --light-orange: #d8b26e;
+  --orange: #d27b42;
+  --dark-orange: #6b4500;
+  --accent-blue: #0093e5;
+  --yellow: #efdd39;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  height: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+/* Nav */
+
+nav {
+  width: 100%;
+  padding: 25px 0;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container .logo h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.nav-container .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.nav-links .hamburger {
+  display: none;
+}
+
+.nav-links ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links ul li {
+  list-style: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: var(--light-black);
+  font-weight: 550;
+}
+
+/* Landing */
+.landing {
+  position: relative;
+  width: 100%;
+  height: 85%;
+}
+
+.landing .landing-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.landing-container .main-section {
+  width: 50%;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.main-section::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 140px;
+  height: 410px;
+  background-color: var(--light-tan);
+  z-index: -1;
+  border-left: 30px solid var(--tan);
+}
+
+.main-section .main-header {
+  justify-items: flex-end;
+}
+
+.main-section .main-header h1 {
+  font-size: 48px;
+}
+
+.main-section .main-description p {
+  color: var(--gray);
+  font-size: 36px;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 35px;
+}
+
+.call-to-action .action-btn {
+  position: relative;
+  font-size: 24px;
+  color: var(--light-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 0 10px 15px;
+  margin: 10px 0;
+}
+
+.action-btn#explore .fas {
+  color: var(--light-orange);
+}
+
+.action-btn#explore::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  z-index: -1;
+}
+
+.action-btn#shop .fas {
+  color: var(--orange);
+}
+
+.action-btn#shop::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--light-orange);
+  z-index: -1;
+}
