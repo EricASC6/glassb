@@ -37,7 +37,7 @@ main {
 }
 
 .container {
-  width: 80%;
+  width: 75%;
   margin: auto;
 }
 
@@ -56,6 +56,7 @@ nav .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
 }
 
 .nav-container .logo h1 {
@@ -125,11 +126,11 @@ nav .nav-container {
   content: "";
   left: 0;
   bottom: 0;
-  width: 185px;
-  height: 410px;
+  width: 220px;
+  height: 420px;
   background-color: var(--light-tan);
   z-index: -1;
-  border-left: 30px solid var(--tan);
+  border-left: 65px solid var(--tan);
 }
 
 .main-section .main-header {
@@ -138,6 +139,10 @@ nav .nav-container {
 
 .main-section .main-header h1 {
   font-size: 48px;
+}
+
+.main-section .main-description {
+  margin-top: 75px;
 }
 
 .main-section .main-description p {
@@ -161,6 +166,10 @@ nav .nav-container {
   text-transform: uppercase;
   padding: 10px 0 10px 15px;
   margin: 10px 0;
+}
+
+.action-btn .fas {
+  margin-left: 15px;
 }
 
 .action-btn#explore .fas {
@@ -207,7 +216,7 @@ nav .nav-container {
 }
 
 .showcase .showcase-description h2 {
-  font-size: 72px;
+  font-size: 78px;
   color: #9595953b;
 }
 
