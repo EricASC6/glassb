@@ -37,7 +37,7 @@ main {
 }
 
 .container {
-  width: 85%;
+  width: 80%;
   margin: auto;
 }
 
@@ -125,7 +125,7 @@ nav .nav-container {
   content: "";
   left: 0;
   bottom: 0;
-  width: 140px;
+  width: 185px;
   height: 410px;
   background-color: var(--light-tan);
   z-index: -1;
@@ -196,10 +196,14 @@ nav .nav-container {
 }
 
 .showcase {
-  width: 50%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.showcase .showcase-description {
+  margin-right: 35px;
+  transform: rotate(-90deg);
 }
 
 .showcase .showcase-description h2 {
@@ -208,5 +212,43 @@ nav .nav-container {
 }
 
 .showcase .glasses-model {
-  /* background: url("./assets/images/") */
+  margin-bottom: 35px;
+}
+
+.showcase .glasses-model .img #model {
+  width: 350px;
+  height: 450px;
+}
+
+.showcase .glasses-model::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 300px;
+  background-color: var(--tan);
+  z-index: -1;
+}
+
+.showcase .glasses-type {
+  display: flex;
+  position: relative;
+  left: -85px;
+  top: 100px;
+  width: 175px;
+  height: 145px;
+  padding: 10px;
+  background-color: var(--light-tan);
+  z-index: -1;
+}
+
+.showcase .glasses-type h2 {
+  transform: rotate(-90deg) translateX(35px) translateY(10px);
+}
+
+.showcase .glasses-type .fas {
+  color: var(--white);
+  font-size: 24px;
+  transform: translateX(-55px) translateY(75px);
 }
