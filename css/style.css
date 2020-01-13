@@ -88,7 +88,13 @@ nav .nav-container {
 .nav-links ul li a {
   text-decoration: none;
   color: var(--light-black);
+  font-size: 20px;
   font-weight: 550;
+}
+
+.nav-shop .shopping-cart .fas {
+  font-size: 22px;
+  cursor: pointer;
 }
 
 /* Landing */
@@ -144,7 +150,7 @@ nav .nav-container {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  margin-left: 35px;
+  margin-left: 15px;
 }
 
 .call-to-action .action-btn {
@@ -187,4 +193,20 @@ nav .nav-container {
   border-radius: 50%;
   background-color: var(--light-orange);
   z-index: -1;
+}
+
+.showcase {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.showcase .showcase-description h2 {
+  font-size: 72px;
+  color: #9595953b;
+}
+
+.showcase .glasses-model {
+  /* background: url("./assets/images/") */
 }
