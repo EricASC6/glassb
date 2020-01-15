@@ -48,6 +48,12 @@ main {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 900px;
+  }
+}
+
 .blue-accent {
   color: var(--accent-blue);
 }
@@ -57,7 +63,7 @@ main {
 nav {
   width: 100%;
   padding: 25px 0;
-  height: 15%;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,11 +121,17 @@ nav .nav-container {
   }
 }
 
+@media screen and (max-width: 1150px) {
+  nav .nav-container {
+    width: 950px;
+  }
+}
+
 /* Landing */
 .landing {
   position: relative;
   width: 100%;
-  height: 85%;
+  height: 80%;
 }
 
 .landing .landing-container {
@@ -132,23 +144,11 @@ nav .nav-container {
 .landing-container .main-section {
   /* width: 50%; */
   height: 100%;
-  padding: 20px 0;
+  padding: 75px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
-}
-
-.main-section::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 220px;
-  height: 475px;
-  background-color: var(--light-tan);
-  z-index: -1;
-  border-left: 65px solid var(--tan);
+  justify-content: space-around;
 }
 
 .main-section .main-header {
@@ -156,7 +156,7 @@ nav .nav-container {
 }
 
 .main-section .main-header h1 {
-  font-size: 48px;
+  font-size: 55px;
   width: 85%;
 }
 
@@ -166,17 +166,16 @@ nav .nav-container {
 
 .main-section .main-description p {
   color: var(--gray);
-  font-size: 36px;
+  font-size: 28px;
   padding: 10px 0;
   width: 85%;
 }
 
 .call-to-action {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  margin-left: 15px;
 }
 
 .call-to-action .action-btn {
@@ -187,6 +186,7 @@ nav .nav-container {
   text-transform: uppercase;
   padding: 10px 0 10px 15px;
   margin: 10px 0;
+  margin-right: 25px;
 }
 
 .action-btn .fas {
@@ -232,9 +232,9 @@ nav .nav-container {
 }
 
 .showcase .showcase-description {
+  display: none;
   position: absolute;
-  right: 50%;
-  transform: rotate(-90deg) translateY(50%);
+  top: 25px;
 }
 
 .showcase .showcase-description h2 {
@@ -242,13 +242,22 @@ nav .nav-container {
   color: #9595953b;
 }
 
+.showcase .showcase-description h2:nth-child(2) {
+  display: none;
+}
+
+.showcase .showcase-description h2:nth-child(3) {
+  display: none;
+}
+
 .showcase .glasses-model {
   margin-bottom: 35px;
 }
 
 .showcase .glasses-model .img #model {
-  width: 350px;
-  height: 450px;
+  width: 425px;
+  height: 500px;
+  box-shadow: 0 45px 100px 0 rgba(49, 49, 49, 0.452);
 }
 
 .showcase .glasses-model::before {
@@ -266,7 +275,7 @@ nav .nav-container {
   display: flex;
   position: relative;
   left: -85px;
-  top: 100px;
+  top: 450px;
   width: 175px;
   height: 145px;
   padding: 10px;
@@ -282,6 +291,17 @@ nav .nav-container {
   color: var(--white);
   font-size: 24px;
   transform: translateX(-55px) translateY(75px);
+}
+
+@media screen and (max-width: 1110px) {
+  .main-section .main-header h1 {
+    font-size: 48px;
+  }
+
+  .showcase .glasses-model .img #model {
+    width: 375px;
+    height: 450px;
+  }
 }
 
 /* Mission */
@@ -360,6 +380,7 @@ nav .nav-container {
 .about-container .about-description {
   z-index: 1;
   width: 45%;
+  transform: translateX(-50%);
 }
 
 .about-container .about-description h2 {
@@ -398,13 +419,37 @@ nav .nav-container {
 }
 
 .about-container .about-location {
-  width: 1000px;
-  transform: rotate(90deg) translateX(75px);
+  position: absolute;
+  top: 100px;
+  right: 35px;
+  transform: rotate(90deg);
   z-index: 1;
   height: 85%;
 }
 .about-location h3 {
-  padding-left: 50px;
+  width: 550px;
   font-size: 48px;
   color: var(--dark-orange);
+}
+
+@media screen and (max-width: 1100px) {
+  .about-container::before {
+    right: -50px;
+    font-size: 125px;
+  }
+
+  .about-container::after {
+    left: -50px;
+    font-size: 125px;
+  }
+
+  .about-container .about-img-card {
+    width: 450px;
+    height: 575px;
+  }
+
+  .about-container .about-img-card #about-model {
+    width: 450px;
+    height: 575px;
+  }
 }
