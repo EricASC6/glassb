@@ -38,8 +38,14 @@ main {
 
 /* Generic styles */
 .container {
-  width: 75%;
+  width: 1080px;
   margin: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    width: 950px;
+  }
 }
 
 .blue-accent {
@@ -61,7 +67,7 @@ nav .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 1150px;
 }
 
 .nav-container .logo h1 {
@@ -103,6 +109,12 @@ nav .nav-container {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1250px) {
+  nav .nav-container {
+    width: 1000px;
+  }
+}
+
 /* Landing */
 .landing {
   position: relative;
@@ -114,10 +126,11 @@ nav .nav-container {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .landing-container .main-section {
-  width: 50%;
+  /* width: 50%; */
   height: 100%;
   padding: 20px 0;
   display: flex;
@@ -132,7 +145,7 @@ nav .nav-container {
   left: 0;
   bottom: 0;
   width: 220px;
-  height: 450px;
+  height: 475px;
   background-color: var(--light-tan);
   z-index: -1;
   border-left: 65px solid var(--tan);
@@ -144,15 +157,18 @@ nav .nav-container {
 
 .main-section .main-header h1 {
   font-size: 48px;
+  width: 85%;
 }
 
 .main-section .main-description {
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
 .main-section .main-description p {
   color: var(--gray);
   font-size: 36px;
+  padding: 10px 0;
+  width: 85%;
 }
 
 .call-to-action {
@@ -216,8 +232,9 @@ nav .nav-container {
 }
 
 .showcase .showcase-description {
-  margin-right: 35px;
-  transform: rotate(-90deg);
+  position: absolute;
+  right: 50%;
+  transform: rotate(-90deg) translateY(50%);
 }
 
 .showcase .showcase-description h2 {
@@ -291,20 +308,47 @@ nav .nav-container {
   height: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 75px;
 }
 
 .about-container::before {
   position: absolute;
-  content: "";
+  content: "ABO";
+  right: -75px;
+  top: -75px;
+  z-index: 1;
+  font-size: 144px;
+  font-weight: bold;
+  mix-blend-mode: multiply;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--light-black);
+  -webkit-text-fill-color: transparent;
+}
+
+.about-container::after {
+  position: absolute;
+  content: "UT";
+  left: -75px;
+  bottom: -75px;
+  z-index: 1;
+  font-size: 144px;
+  font-weight: bold;
+  mix-blend-mode: multiply;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--light-black);
+  -webkit-text-fill-color: transparent;
+}
+
+.about-container .about-bg {
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background: linear-gradient(
       133deg,
-      var(--light-tan) 33%,
+      var(--light-orange) 33%,
       rgba(226, 224, 212, 0.137) 100%
     ),
     url("../assets/images/nyc.jpg");
@@ -354,15 +398,13 @@ nav .nav-container {
 }
 
 .about-container .about-location {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  transform: rotate(90deg) translateX(150px);
+  width: 1000px;
+  transform: rotate(90deg) translateX(75px);
   z-index: 1;
   height: 85%;
 }
-
 .about-location h3 {
-  font-size: 55px;
+  padding-left: 50px;
+  font-size: 48px;
   color: var(--dark-orange);
 }
