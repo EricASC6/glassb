@@ -54,6 +54,12 @@ main {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 800px;
+  }
+}
+
 .blue-accent {
   color: var(--accent-blue);
 }
@@ -127,6 +133,12 @@ nav .nav-container {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  nav .nav-container {
+    width: 800px;
+  }
+}
+
 /* Landing */
 .landing {
   position: relative;
@@ -142,13 +154,10 @@ nav .nav-container {
 }
 
 .landing-container .main-section {
-  /* width: 50%; */
   height: 100%;
   padding: 75px 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .main-section .main-header {
@@ -161,21 +170,21 @@ nav .nav-container {
 }
 
 .main-section .main-description {
-  /* margin-top: 75px; */
+  padding: 20px 0;
 }
 
 .main-section .main-description p {
   color: var(--gray);
-  font-size: 28px;
+  font-size: 24px;
   padding: 10px 0;
   width: 85%;
+  line-height: 175%;
 }
 
 .call-to-action {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .call-to-action .action-btn {
@@ -254,6 +263,34 @@ nav .nav-container {
   margin-bottom: 35px;
 }
 
+.showcase .glasses-model .img {
+  position: relative;
+}
+
+.showcase .glasses-model .img .arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.glasses-model .arrows .fas {
+  position: absolute;
+  font-size: 28px;
+  color: var(--gray);
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.glasses-model .arrows .left {
+  left: -28px;
+}
+
+.glasses-model .arrows .right {
+  right: -28px;
+}
+
 .showcase .glasses-model .img #model {
   width: 425px;
   height: 500px;
@@ -301,6 +338,12 @@ nav .nav-container {
   .showcase .glasses-model .img #model {
     width: 375px;
     height: 450px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-section .main-description p {
+    font-size: 22px;
   }
 }
 
@@ -368,10 +411,11 @@ nav .nav-container {
   left: 0;
   background: linear-gradient(
       133deg,
-      var(--light-orange) 33%,
-      rgba(226, 224, 212, 0.137) 100%
+      rgba(126, 126, 126, 0.33) 0%,
+      rgba(126, 126, 126, 0.33) 100%
     ),
     url("../assets/images/nyc.jpg");
+  filter: grayscale(2);
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
@@ -451,5 +495,41 @@ nav .nav-container {
   .about-container .about-img-card #about-model {
     width: 450px;
     height: 575px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-container .about-img-card {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .about-container .about-description {
+    z-index: 1;
+    width: 50%;
+    transform: translateX(0%);
+    padding: 10px 0;
+  }
+
+  .about-container .about-location {
+    position: static;
+    width: 50%;
+    height: auto;
+    transform: rotate(0deg);
+    z-index: 1;
+    padding: 10px 0;
+  }
+
+  .about-container .about-location h3 {
+    color: var(--light-black);
+    font-size: 40px;
+    padding: 5px 0;
+    width: 95%;
   }
 }
