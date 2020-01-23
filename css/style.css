@@ -82,6 +82,24 @@ main {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 300px;
+  }
+}
+
 .blue-accent {
   color: var(--accent-blue);
   font-weight: bold;
@@ -206,6 +224,16 @@ nav .nav-container {
   background-color: var(--tan);
   z-index: -1;
 }
+
+/* .landing::after {
+  position: absolute;
+  content: "";
+  top: 90px;
+  left: 0;
+  width: 25px;
+  height: 125px;
+  background-color: var(--light-orange);
+} */
 
 .landing .landing-container {
   height: 100%;
@@ -441,6 +469,10 @@ nav .nav-container {
 
   .landing-container .showcase {
     height: auto;
+  }
+
+  .main-section .main-description p {
+    width: 100%;
   }
 
   .showcase .glasses-model .glasses-type {
@@ -702,6 +734,18 @@ nav .nav-container {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-container::before {
+    right: 0px;
+    top: -75px;
+  }
+
+  .about-container::after {
+    left: 0px;
+    bottom: -75px;
+  }
+}
+
 /* Product  */
 .product {
   min-height: 100vh;
@@ -765,9 +809,9 @@ nav .nav-container {
 }
 
 .top-sellers .top-sellers-glasses {
-  display: grid;
-  grid-template-columns: repeat(3, 280px);
-  gap: 33px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .top-sellers-glasses .product-card {
@@ -775,6 +819,7 @@ nav .nav-container {
   width: 280px;
   height: 280px;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .top-sellers-glasses .product-card:hover img {
@@ -833,6 +878,16 @@ nav .nav-container {
   transition-timing-function: ease-out;
 }
 
+@media screen and (max-width: 1000px) {
+  .top-sellers .top-sellers-glasses {
+    justify-content: center;
+  }
+
+  .top-sellers-glasses .product-card {
+    margin: 0 25px 50px 25px;
+  }
+}
+
 /* Reviews */
 .reviews {
   min-height: 100vh;
@@ -859,18 +914,18 @@ nav .nav-container {
 }
 
 .reviews-content .review-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 280px);
-  gap: 33px;
-  justify-content: end;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .review-cards .review-card {
   position: relative;
-  width: 100%;
+  width: 280px;
   height: 325px;
   padding: 25px 50px;
+  margin-bottom: 50px;
   border-radius: 5px;
   background-color: #f3f3f3;
   border-bottom: 25px solid var(--light-black);
@@ -915,10 +970,24 @@ nav .nav-container {
   padding: 5px 0;
 }
 
+.review-card-content .review-img {
+  transform: translateY(25%);
+}
+
 .review-card-content .review-img img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .reviews-content .review-cards {
+    justify-content: center;
+  }
+
+  .review-cards .review-card {
+    margin: 0 25px 50px 25px;
+  }
 }
 
 /* News letter */
@@ -1013,6 +1082,13 @@ nav .nav-container {
 
   .promotions-container #sign-up {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promotions-container #sign-up {
+    width: 100%;
+    flex-direction: column;
   }
 }
 
