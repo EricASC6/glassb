@@ -70,6 +70,18 @@ main {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 500px;
+  }
+}
+
 .blue-accent {
   color: var(--accent-blue);
   font-weight: bold;
@@ -158,6 +170,22 @@ nav .nav-container {
 @media screen and (max-width: 900px) {
   nav .nav-container {
     width: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav .nav-container {
+    width: 600px;
+  }
+
+  .nav-container .nav-links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav .nav-container {
+    width: 500px;
   }
 }
 
@@ -273,25 +301,6 @@ nav .nav-container {
   align-items: flex-end;
 }
 
-.showcase .showcase-description {
-  display: none;
-  position: absolute;
-  top: 25px;
-}
-
-/* .showcase .showcase-description h2 {
-  font-size: 78px;
-  color: #9595953b;
-}
-
-.showcase .showcase-description h2:nth-child(2) {
-  display: none;
-}
-
-.showcase .showcase-description h2:nth-child(3) {
-  display: none;
-} */
-
 .showcase .glasses-model {
   position: relative;
   margin-bottom: 35px;
@@ -375,8 +384,16 @@ nav .nav-container {
 }
 
 @media screen and (max-width: 900px) {
+  .landing::before {
+    width: 375px;
+  }
+
   .main-section .main-header h1 {
     width: 95%;
+  }
+
+  .showcase .glasses-model {
+    margin-bottom: 75px;
   }
 
   .showcase .glasses-model .img {
@@ -402,6 +419,54 @@ nav .nav-container {
     transform: rotate(90deg) translateX(15px);
     width: 24px;
     height: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    height: auto;
+  }
+
+  .landing {
+    min-height: 100vh;
+  }
+
+  .landing::before {
+    width: 400px;
+  }
+
+  .landing .landing-container {
+    flex-direction: column;
+  }
+
+  .landing-container .showcase {
+    height: auto;
+  }
+
+  .showcase .glasses-model .glasses-type {
+    left: 75px;
+    bottom: 0;
+  }
+
+  .showcase .glasses-type h2 {
+    transform: rotate(-90deg) translateX(40px) translateY(10px);
+  }
+
+  .showcase .glasses-type .fas {
+    color: var(--white);
+    font-size: 24px;
+    transform: translateX(-70px) translateY(75px);
+  }
+
+  .showcase .glasses-model .img {
+    width: 425px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .showcase .glasses-model .glasses-type {
+    display: none;
   }
 }
 
@@ -593,6 +658,50 @@ nav .nav-container {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .about .about-container {
+    padding: 0 50px;
+  }
+
+  .about-container .about-img-card {
+    width: 450px;
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-container .about-img-card {
+    width: 400px;
+    height: 550px;
+  }
+
+  .about-container .about-description {
+    width: 75%;
+  }
+
+  .about-container .about-description h2 {
+    font-size: 55px;
+  }
+
+  .about-container .about-location h3 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-container .about-img-card {
+    display: none;
+  }
+
+  .about-container .about-description {
+    width: 100%;
+  }
+
+  .about-container .about-location {
+    width: 75%;
+  }
+}
+
 /* Product  */
 .product {
   min-height: 100vh;
@@ -657,14 +766,14 @@ nav .nav-container {
 
 .top-sellers .top-sellers-glasses {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 325px);
-  gap: 50px;
+  grid-template-columns: repeat(3, 280px);
+  gap: 33px;
 }
 
 .top-sellers-glasses .product-card {
   position: relative;
-  width: 325px;
-  height: 325px;
+  width: 280px;
+  height: 280px;
   cursor: pointer;
 }
 
@@ -724,13 +833,6 @@ nav .nav-container {
   transition-timing-function: ease-out;
 }
 
-@media screen and (max-width: 900px) {
-  .top-sellers-glasses .product-card {
-    width: 300px;
-    height: 300px;
-  }
-}
-
 /* Reviews */
 .reviews {
   min-height: 100vh;
@@ -758,8 +860,8 @@ nav .nav-container {
 
 .reviews-content .review-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 325px);
-  gap: 50px;
+  grid-template-columns: repeat(3, 280px);
+  gap: 33px;
   justify-content: end;
   margin-top: 50px;
 }
@@ -781,6 +883,7 @@ nav .nav-container {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -812,10 +915,6 @@ nav .nav-container {
   padding: 5px 0;
 }
 
-.review-card-content .review-img {
-  transform: translateY(30%);
-}
-
 .review-card-content .review-img img {
   width: 100px;
   height: 100px;
@@ -824,10 +923,10 @@ nav .nav-container {
 
 /* News letter */
 .promotions {
-  padding: 75px 0;
+  padding: 50px 0;
   margin-top: 100px;
   background-color: var(--light-tan);
-  border-left: 33px solid var(--light-black);
+  border-left: 33px solid var(--light-orange);
 }
 
 .promotions-container .promotions-head h2 {
@@ -895,4 +994,84 @@ nav .nav-container {
 
 #sign-up button[type="submit"] .fas {
   margin-left: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .promotions-container #sign-up {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .promotions-container .promotions-head h2 {
+    font-size: 55px;
+  }
+
+  .promotions-container .promotions-head p {
+    font-size: 25px;
+  }
+
+  .promotions-container #sign-up {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  color: var(--white);
+  padding: 50px 0;
+  background-color: var(--light-black);
+}
+
+.footer-container .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-content .footer-main h2 {
+  font-size: 64px;
+}
+
+.footer-main .footer-links {
+  padding: 25px 0;
+}
+
+.footer-main .footer-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer-main .footer-links ul li {
+  margin-right: 25px;
+}
+
+.footer-links ul li a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-main p {
+  color: var(--light-orange);
+}
+
+.footer-content .footer-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-media .fab {
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .footer-content .footer-media {
+    flex-direction: column;
+  }
+
+  .footer-media .fab {
+    margin: 10px 0;
+  }
 }
