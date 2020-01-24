@@ -329,6 +329,7 @@ nav .nav-container {
   border-radius: 50%;
   background-color: var(--orange);
   z-index: -1;
+  animation: reverseHoverBtn 0.5s ease-in;
 }
 
 .action-btn#shop .fas {
@@ -345,6 +346,45 @@ nav .nav-container {
   border-radius: 50%;
   background-color: var(--light-orange);
   z-index: -1;
+  animation: reverseHoverBtn 0.5s ease-in;
+}
+
+.action-btn#explore:hover::before {
+  animation: hoverBtn ease-in 0.5s forwards;
+}
+
+.action-btn#shop:hover::before {
+  animation: hoverBtn ease-in 0.5s forwards;
+}
+
+@keyframes hoverBtn {
+  0% {
+    border-radius: 50%;
+    left: 0;
+  }
+  50% {
+    border-radius: 25px;
+    width: calc(75%);
+  }
+  100% {
+    left: calc(100% - 35px);
+    width: 50px;
+  }
+}
+
+@keyframes reverseHoverBtn {
+  0% {
+    left: calc(100% - 35px);
+    width: 50px;
+  }
+  50% {
+    border-radius: 25px;
+    width: calc(75%);
+  }
+  100% {
+    border-radius: 50%;
+    left: 0;
+  }
 }
 
 .showcase {
@@ -1013,9 +1053,6 @@ nav .nav-container {
 }
 
 /* Reviews */
-.reviews {
-  min-height: 100vh;
-}
 
 .reviews-content .reviews-head {
   text-align: right;
@@ -1056,6 +1093,11 @@ nav .nav-container {
   box-shadow: 0px 20px 23px 0px rgba(189, 189, 189, 0.75);
 }
 
+.review-cards .review-card:hover .review-bg::before {
+  width: 175px;
+  height: 175px;
+}
+
 .review-card .review-bg {
   position: absolute;
   top: 0;
@@ -1074,7 +1116,8 @@ nav .nav-container {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background-color: var(--light-tan);
+  background-color: #decbb18f;
+  transition: all 333ms ease-in-out;
 }
 
 .review-card .review-card-content {
@@ -1160,13 +1203,13 @@ nav .nav-container {
 }
 
 #sign-up .submit {
+  display: inline-block;
   position: relative;
   margin-left: 33px;
   z-index: 3;
 }
 
 #sign-up .submit::before {
-  display: inline-block;
   position: absolute;
   content: "";
   top: 50%;
@@ -1177,6 +1220,11 @@ nav .nav-container {
   height: 55px;
   border-radius: 50%;
   z-index: -1;
+  animation: 0.5s reverseHoverBtn ease-in forwards;
+}
+
+#sign-up .submit:hover::before {
+  animation: hoverBtn ease-in 0.5s forwards;
 }
 
 #sign-up .submit button[type="submit"] {
