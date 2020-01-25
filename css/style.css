@@ -364,7 +364,7 @@ nav .nav-container {
   }
   50% {
     border-radius: 25px;
-    width: calc(75%);
+    width: calc(72%);
   }
   100% {
     left: calc(100% - 35px);
@@ -379,7 +379,7 @@ nav .nav-container {
   }
   50% {
     border-radius: 25px;
-    width: calc(75%);
+    width: calc(72%);
   }
   100% {
     border-radius: 50%;
@@ -416,6 +416,7 @@ nav .nav-container {
   color: var(--gray);
   transform: translateY(-50%);
   top: 50%;
+  cursor: pointer;
 }
 
 .glasses-model .arrows .left {
@@ -426,14 +427,45 @@ nav .nav-container {
   right: -28px;
 }
 
-.showcase .glasses-model .img {
+.showcase .glasses-model .img #img-slider {
+  display: flex;
   width: 425px;
   height: 500px;
+  overflow-x: hidden;
 }
 
-.showcase .glasses-model .img #model {
+.showcase .glasses-model .img #img-slider img {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
+}
+
+.showcase .glasses-model .img #img-slider img.current {
+  z-index: 3;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveOut {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .showcase .glasses-model .glasses-type {
